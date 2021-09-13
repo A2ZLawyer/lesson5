@@ -1,0 +1,23 @@
+using System;
+using System.IO;
+
+namespace lesson5task1
+{
+    class MainClass
+        {
+        private static DateTime date1;
+
+        public static void Main(string[] args)
+            {
+            string text, path;
+            Console.WriteLine("Введите текст для записи в файл. После ввода нажмите Enter: ");
+            string currentt = DateTime.Now.ToLongTimeString();
+            text = Console.ReadLine() + currentt;
+            Console.WriteLine("Введите путь и имя файла для сохранения в формате C:\\File.txt:");
+            path = Console.ReadLine();
+            File.WriteAllText(path, text);
+            Console.WriteLine("Сохранено успешно.");
+            Console.ReadKey();
+            }
+        }
+    }

@@ -1,0 +1,20 @@
+using System;
+using System.IO;
+
+namespace lesson5task2
+{
+    class MainClass
+        {
+        private static DateTime date1;
+
+        public static void Main(string[] args)
+            {
+            File.Create("C:\\startup.txt");
+            string path = @"C:\apache\startup.txt";
+            string text = DateTime.Now.ToLongTimeString();
+            File.WriteAllText(path, text);
+            Console.WriteLine("Сохранено успешно.");
+            Console.ReadKey();
+            }
+        }
+    }
